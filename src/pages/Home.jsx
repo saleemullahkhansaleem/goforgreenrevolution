@@ -1,4 +1,10 @@
-import { AboutSection, HeroSection, ServicesSection } from "@/components";
+import {
+  AboutSection,
+  HeroSection,
+  PortfolioSection,
+  ServicesSection,
+  TeamSection,
+} from "@/components";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import LandingPage from "./LandingPage";
 
@@ -28,6 +34,8 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <PortfolioSection />
+      <TeamSection />
 
       {/* <LandingPage /> */}
     </div>

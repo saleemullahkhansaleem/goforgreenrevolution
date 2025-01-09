@@ -12,6 +12,8 @@ import TruncateParagraph from "./TruncateParagraph";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
+import PortfolioSection from "./PortfolioSection";
+import TeamSection from "./TeamSection";
 import ContactSection from "./ContactSection";
 
 export {
@@ -29,5 +31,7 @@ export {
   HeroSection,
   AboutSection,
   ServicesSection,
+  PortfolioSection,
+  TeamSection,
   ContactSection,
 };

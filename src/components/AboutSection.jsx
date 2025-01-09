@@ -24,19 +24,13 @@ const AboutSection = () => {
             studies to project implementation.
           </p>
           <div className="mt-8 flex gap-4">
-            <Button asChild>
-              <Link
-                to="services"
-                className="px-6 py-3 text-white bg-primary hover:bg-green-700 font-medium rounded-lg shadow-md transition"
-              >
-                Our Services
+            <Button size="lg" asChild>
+              <Link to="services" className="text-white">
+                About Us
               </Link>
             </Button>
-            <Button asChild variant="secondary">
-              <Link
-                to="#contact"
-                className="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded-lg shadow-md transition"
-              >
+            <Button size="lg" asChild variant="secondary">
+              <Link to="#contact" className="">
                 Contact Us
               </Link>
             </Button>
@@ -45,20 +39,22 @@ const AboutSection = () => {
 
         {/* Right Content */}
         <div className="relative">
-          <div className="overflow-hidden rounded-lg shadow-lg">
+          <div className="overflow-hidden rounded-2xl">
             <img
               src="/images/leaf.webp"
               alt="GGR Mission"
               className="w-full aspect-[3/2] object-cover"
             />
           </div>
-          <div className="absolute top-4 left-4 bg-background p-4 shadow-lg rounded-lg">
-            <h3 className="text-lg font-semibold text-primary">
-              100+ Projects
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              Delivered across energy, climate change, and infrastructure.
-            </p>
+          <div className="absolute bottom-8 left-4 md:-left-8 p-1 bg-background rounded-2xl">
+            <div className="bg-accent p-4 rounded-xl border">
+              <h3 className="text-lg font-semibold text-primary">
+                100+ Projects
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Delivered across energy, climate change, and infrastructure.
+              </p>
+            </div>
           </div>
         </div>
       </div>

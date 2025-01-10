@@ -82,10 +82,10 @@ export default function TeamPage() {
 
 function LeadershipCard({ name, title, image, description, achievements }) {
   return (
-    <Card className="relative bg-muted shadow-none border-none group overflow-hidden">
-      <div className="absolute left-0 top-0 pb-3 pr-3 rounded-br-[2.25rem] bg-background z-10">
-        <span className="absolute left-full top-0 w-10 h-10 bg-background rounded-full rounded-tl-none"></span>
-        <span className="absolute left-full top-0 w-10 h-10 bg-muted rounded-full"></span>
+    <Card className="relative bg-muted shadow-none border-none group mt-12">
+      <div className="absolute left-0 -top-12 pb-3 pr-3 rounded-br-[2.25rem] bg-background z-10">
+        <span className="absolute left-full top-12 w-10 h-10 bg-background rounded-full rounded-tl-none"></span>
+        <span className="absolute left-full top-12 w-10 h-10 bg-muted rounded-full"></span>
         <span className="absolute left-0 top-full w-10 h-10 bg-background rounded-full rounded-tl-none"></span>
         <span className="absolute left-0 top-full w-10 h-10 bg-muted rounded-full"></span>
         <div className="bg-primary/10 p-2 rounded-3xl">

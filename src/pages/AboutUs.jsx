@@ -79,11 +79,9 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto">
           <div className="bg-primary text-background rounded-2xl p-8 md:p-12 relative">
             <div className="text-center max-w-4xl mx-auto">
-              {/* <div className="bg-primary rounded-3xl p-2"> */}
               <h2 className="text-3xl font-bold bg-background text-primary rounded-3xl p-4 absolute left-8 -top-12 border-8 border-primary">
                 Our Mission
               </h2>
-              {/* </div> */}
               <p className="text-xl leading-relaxed mt-4">
                 To help Private and Public sectors and individuals benefit from
                 adopting low Greenhouse Gases and environmental conscious life
@@ -113,11 +111,9 @@ export default function AboutUs() {
                   <span className="absolute left-full top-12 w-8 h-8 bg-background rounded-full"></span>
                   <span className="absolute right-full top-12 w-8 h-8 bg-muted rounded-full rounded-tr-none"></span>
                   <span className="absolute right-full top-12 w-8 h-8 bg-background rounded-full"></span>
-                  {/* <div className="bg-primary/10 p-2 rounded-2xl"> */}
-                    <div className="p-4 bg-primary/10 rounded-xl">
-                      {item.icon}
-                    </div>
-                  {/* </div> */}
+                  <div className="p-4 bg-primary/10 rounded-xl">
+                    {item.icon}
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>

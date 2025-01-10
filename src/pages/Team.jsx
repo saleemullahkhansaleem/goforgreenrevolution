@@ -98,7 +98,6 @@ function LeadershipCard({ name, title, image, description, achievements }) {
       </div>
       <div className="grid md:grid-cols-1 gap-6">
         <div className="relative h-full min-h-[170px]">
-          {/* <img src={image} alt={name} className="object-cover" /> */}
           <CardHeader className="p-8 pl-60 mb-4 hidden sm:block">
             <CardTitle className="text-2xl mb-2">{name}</CardTitle>
             <CardDescription className="text-lg font-medium text-primary">

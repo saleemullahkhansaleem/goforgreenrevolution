@@ -62,7 +62,7 @@ export default function Footer() {
   if (!footerData) return null;
 
   return (
-    <footer className="dark bg-background text-muted-foreground">
+    <footer className="dark bg-background text-muted-foreground border-t">
       <div className="container mx-auto grid gap-8 py-12 px-6 md:grid-cols-2 lg:grid-cols-4">
         {/* Company Info Section */}
         <div className="flex flex-col gap-4">

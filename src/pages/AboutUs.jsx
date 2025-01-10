@@ -21,13 +21,13 @@ export default function AboutUs() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12">
+      <section className="py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="text-center p-6 rounded-lg bg-background border shadow-sm"
+                className="text-center p-6 rounded-2xl bg-primary/10"
               >
                 <div className="text-4xl font-bold text-primary mb-2">
                   {stat.value}
@@ -61,11 +61,6 @@ export default function AboutUs() {
                   </div>
                 </div>
                 <CardContent className="p-10">
-                  {/* <div className="flex items-center mb-4">
-                    <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300">
-                      {objective.icon}
-                    </div>
-                  </div> */}
                   <h3 className="text-xl font-semibold mb-6 pl-12">
                     {objective.title}
                   </h3>
@@ -82,10 +77,14 @@ export default function AboutUs() {
       {/* Mission Statement */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-green-900 text-background rounded-2xl p-8 md:p-12">
+          <div className="bg-primary text-background rounded-2xl p-8 md:p-12 relative">
             <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8">Our Mission</h2>
-              <p className="text-xl leading-relaxed">
+              {/* <div className="bg-primary rounded-3xl p-2"> */}
+              <h2 className="text-3xl font-bold bg-background text-primary rounded-3xl p-4 absolute left-8 -top-12 border-8 border-primary">
+                Our Mission
+              </h2>
+              {/* </div> */}
+              <p className="text-xl leading-relaxed mt-4">
                 To help Private and Public sectors and individuals benefit from
                 adopting low Greenhouse Gases and environmental conscious life
                 styles, addressing global environmental issues with local
@@ -103,17 +102,25 @@ export default function AboutUs() {
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
             Our Expertise
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
             {expertise.map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="p-6 bg-background rounded-2xl space-y-4 relative mt-12"
               >
-                <div className="p-2 bg-primary/10 rounded-lg">{item.icon}</div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                <div className="absolute right-10 -top-12 p-3 rounded-b-2xl bg-muted">
+                  <span className="absolute left-full top-12 w-8 h-8 bg-muted rounded-full rounded-tl-none"></span>
+                  <span className="absolute left-full top-12 w-8 h-8 bg-background rounded-full"></span>
+                  <span className="absolute right-full top-12 w-8 h-8 bg-muted rounded-full rounded-tr-none"></span>
+                  <span className="absolute right-full top-12 w-8 h-8 bg-background rounded-full"></span>
+                  {/* <div className="bg-primary/10 p-2 rounded-2xl"> */}
+                    <div className="p-4 bg-primary/10 rounded-xl">
+                      {item.icon}
+                    </div>
+                  {/* </div> */}
                 </div>
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>

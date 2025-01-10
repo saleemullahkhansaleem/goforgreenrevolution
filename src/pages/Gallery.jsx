@@ -1,78 +1,291 @@
+import { useState } from "react";
+import { ArrowUpRight, Filter } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
-const Gallery = () => {
+export default function PortfolioPage() {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const filteredProjects =
+    selectedCategory === "all"
+      ? projects
+      : projects.filter((project) => project.category === selectedCategory);
+
   return (
-    <section className="w-full py-12 md:py-24 bg-primary/5">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <Badge
-            variant="secondary"
-            className="mb-4 px-4 py-2 text-base bg-primary/10 text-primary"
-          >
-            Portfolio
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Our Latest Projects
-          </h2>
-          <p className="max-w-[900px] text-muted-foreground md:text-xl">
-            Explore our successful HVAC installations across Pakistan
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/20 to-transparent overflow-hidden">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            Our Portfolio
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Explore our impactful projects that demonstrate our commitment to
+            environmental sustainability and innovation
           </p>
         </div>
-        <div className="mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-16">
-          {[
-            {
-              title: "Commercial Building HVAC System",
-              category: "Commercial",
-              image: "/services/home.webp",
-            },
-            {
-              title: "Residential Complex Installation",
-              category: "Residential",
-              image: "/services/home-2.webp",
-            },
-            {
-              title: "Hospital HVAC Solution",
-              category: "Healthcare",
-              image: "/services/school.webp",
-            },
-            {
-              title: "Commercial Building HVAC System",
-              category: "Commercial",
-              image: "/services/home.webp",
-            },
-            {
-              title: "Residential Complex Installation",
-              category: "Residential",
-              image: "/services/home-2.webp",
-            },
-            {
-              title: "Hospital HVAC Solution",
-              category: "Healthcare",
-              image: "/services/school.webp",
-            },
-          ].map((project, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-2xl bg-primary/10"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/100 to-cyan-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+      </section>
+
+      {/* Filter Section */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 border-b">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center gap-4 overflow-x-auto pb-4">
+            <Filter className="w-5 h-5 text-muted-foreground" />
+            {categories.map((category) => (
+              <Button
+                key={category.value}
+                variant="ghost"
+                size="sm"
+                className={cn(
+                  "rounded-full",
+                  selectedCategory === category.value &&
+                    "bg-primary text-primary-foreground hover:bg-primary/90"
+                )}
+                onClick={() => setSelectedCategory(category.value)}
+              >
+                {category.label}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto">
+          <ProjectCard projects={filteredProjects} />
+        </div>
+      </section>
+
+      {/* Project Details Dialog */}
+    </div>
+  );
+}
+
+export function ProjectCard({ projects = [] }) {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+      {projects.map((project) => (
+        <div
+          key={project.id}
+          className="relative bg-muted rounded-2xl overflow-hidden group cursor-pointer"
+          onClick={() => setSelectedProject(project)}
+        >
+          <div className="absolute right-0 top-0 pb-3 pl-3 rounded-bl-[2.25rem] bg-background z-10">
+            <span className="absolute right-full top-0 w-10 h-10 bg-background rounded-full rounded-tr-none"></span>
+            <span className="absolute right-full top-0 w-10 h-10 bg-muted rounded-full"></span>
+            <span className="absolute right-0 top-full w-10 h-10 bg-background rounded-full rounded-tr-none"></span>
+            <span className="absolute right-0 top-full w-10 h-10 bg-muted rounded-full"></span>
+            <div className="bg-primary/10 p-4 rounded-full group-hover:bg-primary/20 transition-colors">
+              <ArrowUpRight className="text-primary text-xl" />
+            </div>
+          </div>
+          <div className="p-6 pr-12">
+            <Badge variant="secondary" className="mb-3">
+              {project.category}
+            </Badge>
+            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+            <p className="text-sm text-muted-foreground">
+              {project.description}
+            </p>
+          </div>
+          <div className="relative h-[300px]">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="object-cover w-full transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+        </div>
+      ))}
+      <Dialog
+        open={!!selectedProject}
+        onOpenChange={() => setSelectedProject(null)}
+      >
+        {selectedProject && (
+          <DialogContent className="max-w-3xl max-h-screen overflow-auto">
+            <DialogHeader>
+              <DialogTitle>{selectedProject.title}</DialogTitle>
+              <DialogDescription>
+                {selectedProject.description}
+              </DialogDescription>
+            </DialogHeader>
+            <div className="relative w-full rounded-lg overflow-hidden my-4">
               <img
-                alt={project.title}
-                className="object-cover w-full aspect-[4/3] group-hover:scale-110 transition-transform duration-500"
-                src={project.image}
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="object-cover aspect-video w-full"
               />
-              <div className="absolute inset-0 flex flex-col items-start justify-end p-6 bg-gradient-to-t from-background/80 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <Badge className="text-sm">{project.category}</Badge>
-                <h3 className="text-xl font-semibold text-foreground mt-2">
-                  {project.title}
-                </h3>
+            </div>
+            <div className="grid gap-4">
+              <div>
+                <h4 className="font-semibold mb-2">Project Details</h4>
+                <dl className="grid grid-cols-2 gap-4">
+                  <div>
+                    <dt className="text-sm text-muted-foreground">Client</dt>
+                    <dd>{selectedProject.details.client}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-sm text-muted-foreground">Duration</dt>
+                    <dd>{selectedProject.details.duration}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-sm text-muted-foreground">Location</dt>
+                    <dd>{selectedProject.details.location}</dd>
+                  </div>
+                </dl>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">Impact & Outcomes</h4>
+                <ul className="list-disc list-inside space-y-1">
+                  {selectedProject.details.impact.map((item, index) => (
+                    <li key={index} className="text-muted-foreground">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+          </DialogContent>
+        )}
+      </Dialog>
+    </div>
   );
-};
+}
 
-export default Gallery;
+const categories = [
+  { value: "all", label: "All Projects" },
+  { value: "water", label: "Water Resources" },
+  { value: "energy", label: "Renewable Energy" },
+  { value: "climate", label: "Climate Change" },
+  { value: "community", label: "Community Development" },
+  { value: "geospatial", label: "Geospatial Analysis" },
+  { value: "disaster", label: "Disaster Risk Reduction" },
+];
+
+export const projects = [
+  {
+    id: "1",
+    title: "Water Resource Management",
+    description:
+      "An innovative project focusing on sustainable water resource allocation for agriculture and urban areas.",
+    image: "https://picsum.photos/400/300?random=1",
+    category: "water",
+    details: {
+      client: "Regional Water Authority",
+      duration: "18 months",
+      location: "Punjab, Pakistan",
+      impact: [
+        "30% reduction in water wastage",
+        "Improved irrigation efficiency for 1000+ farmers",
+        "Implementation of smart water monitoring systems",
+        "Development of sustainable water policies",
+      ],
+    },
+  },
+  {
+    id: "2",
+    title: "Renewable Energy Solutions",
+    description:
+      "Development of solar and wind power systems to reduce carbon footprints and energy costs.",
+    image: "https://picsum.photos/400/300?random=2",
+    category: "energy",
+    details: {
+      client: "Ministry of Energy",
+      duration: "24 months",
+      location: "Sindh, Pakistan",
+      impact: [
+        "Installation of 500MW solar capacity",
+        "40% reduction in carbon emissions",
+        "Energy access for 10,000+ households",
+        "Creation of 200+ green jobs",
+      ],
+    },
+  },
+  {
+    id: "3",
+    title: "Climate Change Mitigation",
+    description:
+      "Strategies and projects aimed at reducing the impact of climate change in vulnerable regions.",
+    image: "https://picsum.photos/400/300?random=3",
+    category: "climate",
+    details: {
+      client: "Environmental Protection Agency",
+      duration: "36 months",
+      location: "Multiple Regions, Pakistan",
+      impact: [
+        "Development of climate action plans",
+        "Implementation of early warning systems",
+        "Protection of vulnerable ecosystems",
+        "Community resilience programs",
+      ],
+    },
+  },
+  {
+    id: "4",
+    title: "Community Development Programs",
+    description:
+      "Empowering local communities through capacity building and sustainable practices.",
+    image: "https://picsum.photos/400/300?random=4",
+    category: "community",
+    details: {
+      client: "NGO Consortium",
+      duration: "12 months",
+      location: "KPK, Pakistan",
+      impact: [
+        "Training for 1000+ community members",
+        "Establishment of sustainable businesses",
+        "Implementation of waste management systems",
+        "Development of community leadership",
+      ],
+    },
+  },
+  {
+    id: "5",
+    title: "Geospatial Analysis Projects",
+    description:
+      "Utilizing GIS and remote sensing for better planning and resource management.",
+    image: "https://picsum.photos/400/300?random=5",
+    category: "geospatial",
+    details: {
+      client: "Urban Planning Department",
+      duration: "15 months",
+      location: "Islamabad, Pakistan",
+      impact: [
+        "Creation of detailed land use maps",
+        "Improved urban planning decisions",
+        "Environmental impact assessments",
+        "Resource optimization strategies",
+      ],
+    },
+  },
+  {
+    id: "6",
+    title: "Disaster Risk Reduction (DRR)",
+    description:
+      "Innovative approaches to minimize risks and enhance preparedness for natural disasters.",
+    image: "https://picsum.photos/400/300?random=6",
+    category: "disaster",
+    details: {
+      client: "Disaster Management Authority",
+      duration: "24 months",
+      location: "Coastal Areas, Pakistan",
+      impact: [
+        "Implementation of early warning systems",
+        "Community preparedness training",
+        "Infrastructure resilience assessment",
+        "Emergency response protocols",
+      ],
+    },
+  },
+];

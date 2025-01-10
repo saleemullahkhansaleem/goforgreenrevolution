@@ -3,6 +3,7 @@ import { FaLeaf, FaWater, FaTools, FaSolarPanel } from "react-icons/fa";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -85,8 +86,10 @@ const ServicesSection = () => {
           ))}
         </div>
         <div className="mt-16 text-center">
-          <Button variant="" size="lg">
-            View All Services <ArrowUpRight />
+          <Button variant="" size="lg" asChild>
+            <Link to="services">
+              View All Services <ArrowUpRight />
+            </Link>
           </Button>
         </div>
       </div>

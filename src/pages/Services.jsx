@@ -14,8 +14,6 @@ import {
   Recycle,
   Users,
   Globe,
-  ArrowRight,
-  ArrowUpRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -24,9 +22,6 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/20 to-transparent overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]" />
-        </div>
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground">

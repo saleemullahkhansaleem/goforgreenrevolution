@@ -25,12 +25,12 @@ const AboutSection = () => {
           </p>
           <div className="mt-8 flex gap-4">
             <Button size="lg" asChild>
-              <Link to="services" className="text-white">
+              <Link to="about" className="text-white">
                 About Us
               </Link>
             </Button>
             <Button size="lg" asChild variant="secondary">
-              <Link to="#contact" className="">
+              <Link to="contact" className="">
                 Contact Us
               </Link>
             </Button>

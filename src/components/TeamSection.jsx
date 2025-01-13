@@ -17,7 +17,7 @@ const TeamSection = () => {
           innovative solutions for sustainable development.
         </p>
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-8">
           {experts.slice(0, 4).map((member) => (
             <ExpertCard key={member.name} {...member} />
           ))}

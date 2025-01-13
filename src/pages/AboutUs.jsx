@@ -1,5 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Leaf, Users, LineChart, Building2, Globe, Target } from "lucide-react";
+import {
+  Leaf,
+  Users,
+  LineChart,
+  Building2,
+  Globe,
+  Target,
+  Plus,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function AboutUs() {
@@ -27,9 +35,15 @@ export default function AboutUs() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="text-center p-6 rounded-2xl bg-primary/10"
+                className="text-center p-6 rounded-lg bg-primary/20 shadow hover:shadow-lg relative"
               >
-                <div className="text-4xl font-bold text-primary mb-2">
+                <div className="absolute top-2 left-[10%] rounded-full bg-background text-primary/30 text-xl w-4 h-4">
+                  <div className="absolute bottom-1 right-1 left-1 rounded-full bg-secondary text-primary/30 text-xl w-2 h-7"></div>
+                </div>
+                <div className="absolute top-2 right-[10%] rounded-full bg-background text-primary/30 text-xl w-4 h-4">
+                  <div className="absolute bottom-1 right-1 left-1 rounded-full bg-secondary text-primary/30 text-xl w-2 h-7"></div>
+                </div>
+                <div className="text-4xl font-bold text-secondary mb-2">
                   {stat.value}
                 </div>
                 <div className="text-muted-foreground">{stat.label}</div>
@@ -49,18 +63,18 @@ export default function AboutUs() {
             {objectives.map((objective, index) => (
               <Card
                 key={index}
-                className="group relative shadow-none border-none bg-muted"
+                className="group relative shadow-none border-none bg-muted mt-6"
               >
-                <div className="absolute left-0 top-0 pb-3 pr-3 rounded-br-[2.25rem] bg-background z-10">
-                  <span className="absolute left-full top-0 w-10 h-10 bg-background rounded-full rounded-tl-none"></span>
-                  <span className="absolute left-full top-0 w-10 h-10 bg-muted rounded-full"></span>
+                <div className="absolute left-0 -top-6 pb-3 pr-3 rounded-br-[2.25rem] bg-background z-10">
+                  <span className="absolute left-full top-6 w-10 h-10 bg-background rounded-full rounded-tl-none"></span>
+                  <span className="absolute left-full top-6 w-10 h-10 bg-muted rounded-full"></span>
                   <span className="absolute left-0 top-full w-10 h-10 bg-background rounded-full rounded-tl-none"></span>
                   <span className="absolute left-0 top-full w-10 h-10 bg-muted rounded-full"></span>
                   <div className="bg-primary/10 p-4 rounded-full">
                     {objective.icon}
                   </div>
                 </div>
-                <CardContent className="p-10">
+                <CardContent className="p-8">
                   <h3 className="text-xl font-semibold mb-6 pl-12">
                     {objective.title}
                   </h3>
@@ -79,9 +93,15 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto">
           <div className="bg-primary text-background rounded-2xl p-8 md:p-12 relative">
             <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold bg-background text-primary rounded-3xl p-4 absolute left-8 -top-12 border-8 border-primary">
-                Our Mission
-              </h2>
+              <div className="rounded-3xl p-[10px] absolute left-16 -top-10 bg-primary">
+                <h2 className="text-3xl font-bold bg-background text-primary rounded-2xl p-4">
+                  Our Mission
+                  <span className="absolute left-full top-2 w-8 h-8 bg-primary rounded-full rounded-bl-none"></span>
+                  <span className="absolute left-full top-2 w-8 h-8 bg-background rounded-bl-[1.5rem]"></span>
+                  <span className="absolute right-full top-2 w-8 h-8 bg-primary rounded-full rounded-br-none"></span>
+                  <span className="absolute right-full top-2 w-8 h-8 bg-background rounded-br-[1.5rem]"></span>
+                </h2>
+              </div>
               <p className="text-xl leading-relaxed mt-4">
                 To help Private and Public sectors and individuals benefit from
                 adopting low Greenhouse Gases and environmental conscious life

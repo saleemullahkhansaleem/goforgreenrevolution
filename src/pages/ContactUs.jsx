@@ -84,7 +84,9 @@ export default function ContactPage() {
                 {contactInfo.map((item, index) => (
                   <div
                     key={item.icon}
-                    className={`p-8 bg-muted rounded-2xl relative ${index===0 && 'sm:col-span-2'}`}
+                    className={`p-8 bg-muted rounded-2xl relative ${
+                      index === 0 && "sm:col-span-2"
+                    }`}
                   >
                     <div className="absolute right-0 top-0 pb-3 pl-3 rounded-bl-[2.25rem] bg-background z-10">
                       <span className="absolute right-full top-0 w-10 h-10 bg-background rounded-full rounded-tr-none"></span>
@@ -217,7 +219,7 @@ const contactInfo = [
   {
     icon: <Phone className="w-6 h-6 text-primary" />,
     title: "Phone",
-    content: ["+92-51-2222333", "+92-300-1234567"],
+    content: ["+92-51-8739888", "+92-51-8736789"],
   },
   {
     icon: <Mail className="w-6 h-6 text-primary" />,

@@ -22,29 +22,32 @@ export default function Footer() {
         quickLinks: [
           { name: "About Us", path: "/about" },
           { name: "Services", path: "/services" },
-          { name: "Projects", path: "/projects" },
+          { name: "Projects", path: "/gallery" },
           { name: "Contact", path: "/contact" },
         ],
         services: [
           {
-            name: "Environmental Consultancy",
-            path: "/environmental-consultancy",
+            name: "CDM & Energy Projects",
+            path: "/services/#cdm-energy",
           },
           {
-            name: "Climate Change Adaptation & Mitigation",
-            path: "/climate-change",
-          },
-          { name: "Energy & Hydropower", path: "/energy-hydropower" },
-          {
-            name: "Natural Resource Management",
-            path: "/natural-resource-management",
+            name: "Environmental & Climate Services",
+            path: "/services/#environmental-climate",
           },
           {
-            name: "IT & Infrastructure Development",
-            path: "/it-infrastructure",
+            name: "Disaster Risk Reduction & REDD+",
+            path: "/services/#drr-redd",
           },
-          { name: "Capacity Building & Training", path: "/capacity-building" },
+          {
+            name: "Horticulture & Waste Management",
+            path: "/services/#horticulture-waste",
+          },
+          {
+            name: "GCF Projects & Capacity Building",
+            path: "/services/#gcf-capacity",
+          },
         ],
+
         socialMedia: [
           { platform: "Facebook", url: "#", icon: <Facebook size={20} /> },
           { platform: "Instagram", url: "#", icon: <Instagram size={20} /> },
@@ -74,7 +77,8 @@ export default function Footer() {
             />
           </Link>
           <p className="text-sm leading-relaxed">
-            <strong>{footerData.companyInfo.name}</strong> <br /> {footerData.companyInfo.description}
+            <strong>{footerData.companyInfo.name}</strong> <br />{" "}
+            {footerData.companyInfo.description}
           </p>
         </div>
 

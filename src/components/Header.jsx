@@ -38,7 +38,7 @@ const Header = ({ setDarkMode, darkMode }) => {
               {
                 icon: FaPhoneAlt,
                 title: "Call Us",
-                content: "+92-51-8481049",
+                content: "+92-51-8739888",
                 link: "tel:+92518739888",
               },
             ].map((item, index) => (

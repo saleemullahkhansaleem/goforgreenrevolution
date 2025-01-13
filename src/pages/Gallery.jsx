@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -35,32 +36,33 @@ export default function PortfolioPage() {
       </section>
 
       {/* Filter Section */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 border-b">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 sticky top-16 z-20 backdrop-blur-sm border-b">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 overflow-x-auto pb-4">
-            <Filter className="w-5 h-5 text-muted-foreground" />
-            {categories.map((category) => (
-              <Button
-                key={category.value}
-                variant="ghost"
-                size="sm"
-                className={cn(
-                  "rounded-full",
-                  selectedCategory === category.value &&
-                    "bg-primary text-primary-foreground hover:bg-primary/90"
-                )}
-                onClick={() => setSelectedCategory(category.value)}
-              >
-                {category.label}
-              </Button>
-            ))}
-          </div>
+          <ScrollArea className="w-full whitespace-nowrap">
+            <div className="flex items-center space-x-4">
+              <Filter className="w-5 h-5 text-muted-foreground" />
+              {categories.map((category) => (
+                <Button
+                  size="sm"
+                  key={category.value}
+                  variant={
+                    selectedCategory === category.value ? "default" : "outline"
+                  }
+                  onClick={() => setSelectedCategory(category.value)}
+                  className="rounded-full"
+                >
+                  {category.label}
+                </Button>
+              ))}
+            </div>
+            <ScrollBar orientation="horizontal" />
+          </ScrollArea>
         </div>
       </section>
 
       {/* Portfolio Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
+        <div className="max-w-7xl mx-auto">
           <ProjectCard projects={filteredProjects} />
         </div>
       </section>
@@ -78,15 +80,15 @@ export function ProjectCard({ projects = [] }) {
       {projects.map((project) => (
         <div
           key={project.id}
-          className="relative bg-muted rounded-2xl overflow-hidden group cursor-pointer"
+          className="relative bg-muted rounded-2xl mt-4 group cursor-pointer flex flex-col justify-between"
           onClick={() => setSelectedProject(project)}
         >
-          <div className="absolute right-0 top-0 pb-3 pl-3 rounded-bl-[2.25rem] bg-background z-10">
-            <span className="absolute right-full top-0 w-10 h-10 bg-background rounded-full rounded-tr-none"></span>
-            <span className="absolute right-full top-0 w-10 h-10 bg-muted rounded-full"></span>
+          <div className="absolute right-0 -top-4 pb-3 pl-3 rounded-bl-[1.25rem] bg-background z-10">
+            <span className="absolute right-full top-4 w-10 h-10 bg-background rounded-full rounded-tr-none"></span>
+            <span className="absolute right-full top-4 w-10 h-10 bg-muted rounded-full"></span>
             <span className="absolute right-0 top-full w-10 h-10 bg-background rounded-full rounded-tr-none"></span>
             <span className="absolute right-0 top-full w-10 h-10 bg-muted rounded-full"></span>
-            <div className="bg-primary/10 p-4 rounded-full group-hover:bg-primary/20 transition-colors">
+            <div className="bg-primary/10 p-4 rounded-xl group-hover:bg-primary/20 transition-colors">
               <ArrowUpRight className="text-primary text-xl" />
             </div>
           </div>
@@ -99,11 +101,11 @@ export function ProjectCard({ projects = [] }) {
               {project.description}
             </p>
           </div>
-          <div className="relative h-[300px]">
+          <div className="relative h-[300px] rounded-2xl overflow-hidden">
             <img
               src={project.image}
               alt={project.title}
-              className="object-cover w-full transition-transform duration-300 group-hover:scale-105"
+              className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
             />
           </div>
         </div>
@@ -179,7 +181,7 @@ export const projects = [
     title: "Water Resource Management",
     description:
       "An innovative project focusing on sustainable water resource allocation for agriculture and urban areas.",
-    image: "https://picsum.photos/400/300?random=1",
+    image: "/images/projects/water-resource-management.webp",
     category: "water",
     details: {
       client: "Regional Water Authority",
@@ -198,7 +200,7 @@ export const projects = [
     title: "Renewable Energy Solutions",
     description:
       "Development of solar and wind power systems to reduce carbon footprints and energy costs.",
-    image: "https://picsum.photos/400/300?random=2",
+    image: "/images/projects/renewable-energy-solutions.webp",
     category: "energy",
     details: {
       client: "Ministry of Energy",
@@ -217,7 +219,7 @@ export const projects = [
     title: "Climate Change Mitigation",
     description:
       "Strategies and projects aimed at reducing the impact of climate change in vulnerable regions.",
-    image: "https://picsum.photos/400/300?random=3",
+    image: "/images/projects/climate-change-mitigation.webp",
     category: "climate",
     details: {
       client: "Environmental Protection Agency",
@@ -236,7 +238,7 @@ export const projects = [
     title: "Community Development Programs",
     description:
       "Empowering local communities through capacity building and sustainable practices.",
-    image: "https://picsum.photos/400/300?random=4",
+    image: "/images/projects/community-development-programs.webp",
     category: "community",
     details: {
       client: "NGO Consortium",
@@ -255,7 +257,7 @@ export const projects = [
     title: "Geospatial Analysis Projects",
     description:
       "Utilizing GIS and remote sensing for better planning and resource management.",
-    image: "https://picsum.photos/400/300?random=5",
+    image: "/images/projects/geospatial-analysis.webp",
     category: "geospatial",
     details: {
       client: "Urban Planning Department",
@@ -274,7 +276,7 @@ export const projects = [
     title: "Disaster Risk Reduction (DRR)",
     description:
       "Innovative approaches to minimize risks and enhance preparedness for natural disasters.",
-    image: "https://picsum.photos/400/300?random=6",
+    image: "/images/projects/disaster-risk-reduction.webp",
     category: "disaster",
     details: {
       client: "Disaster Management Authority",

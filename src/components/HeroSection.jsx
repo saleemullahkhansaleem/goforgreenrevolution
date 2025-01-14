@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-background text-white overflow-hidden dark min-h-[calc(100vh-96px)] flex items-center">
+    <section className="relative bg-background text-white overflow-hidden dark min-h-[calc(100vh-82px)] flex items-center">
       <div className="absolute inset-0">
         <img
           src="/images/hero-bg.webp"

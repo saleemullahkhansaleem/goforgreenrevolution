@@ -26,7 +26,7 @@ export default function NavbarMobile({ navigation = [] }) {
           </Button>
         </SheetTrigger>
         <SheetContent
-          side="left"
+          side="right"
           className="w-64 bg-background p-4 overflow-y-auto xl:hidden"
         >
           <SheetTitle className="mb-2">Menu</SheetTitle>

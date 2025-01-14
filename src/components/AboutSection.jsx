@@ -46,7 +46,7 @@ const AboutSection = () => {
               className="w-full aspect-[3/2] object-cover"
             />
           </div>
-          <div className="absolute bottom-8 left-4 md:-left-8 p-1 bg-background rounded-2xl">
+          <div className="absolute bottom-8 left-4 md:-left-8 p-1 bg-background rounded-2xl mr-4">
             <div className="bg-accent p-4 rounded-xl border">
               <h3 className="text-lg font-semibold text-primary">
                 100+ Projects

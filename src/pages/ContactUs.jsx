@@ -90,9 +90,9 @@ export default function ContactPage() {
                   >
                     <div className="absolute right-0 top-0 pb-3 pl-3 rounded-bl-[2.25rem] bg-background z-10">
                       <span className="absolute right-full top-0 w-10 h-10 bg-background rounded-full rounded-tr-none"></span>
-                      <span className="absolute right-full top-0 w-10 h-10 bg-muted rounded-full"></span>
+                      <span className="absolute right-full top-0 w-10 h-10 bg-muted rounded-tr-3xl"></span>
                       <span className="absolute right-0 top-full w-10 h-10 bg-background rounded-full rounded-tr-none"></span>
-                      <span className="absolute right-0 top-full w-10 h-10 bg-muted rounded-full"></span>
+                      <span className="absolute right-0 top-full w-10 h-10 bg-muted rounded-tr-3xl"></span>
                       <div className="bg-primary/10 p-4 rounded-full">
                         {item.icon}
                       </div>
@@ -161,15 +161,15 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full py-2 px-4 bg-foreground/5 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary"
+                  className="w-full py-2 px-4 bg-foreground/5 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary resize-none"
                 />
                 {error && <p className="text-red-500">{error}</p>}
               </div>
               <div className="absolute right-0 bottom-0 pt-3 pl-3 rounded-tl-[2rem] bg-background z-10">
                 <span className="absolute right-full bottom-0 w-8 h-8 bg-background rounded-full rounded-br-none"></span>
-                <span className="absolute right-full bottom-0 w-8 h-8 bg-muted rounded-full"></span>
+                <span className="absolute right-full bottom-0 w-8 h-8 bg-muted rounded-br-3xl"></span>
                 <span className="absolute right-0 bottom-full w-8 h-8 bg-background rounded-full rounded-br-none"></span>
-                <span className="absolute right-0 bottom-full w-8 h-8 bg-muted rounded-full"></span>
+                <span className="absolute right-0 bottom-full w-8 h-8 bg-muted rounded-br-3xl"></span>
                 <Button
                   variant="outline"
                   size="lg"

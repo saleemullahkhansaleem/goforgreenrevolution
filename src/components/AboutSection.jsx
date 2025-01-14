@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import { Info, Users } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -26,12 +27,12 @@ const AboutSection = () => {
           <div className="mt-8 flex gap-4">
             <Button size="lg" asChild>
               <Link to="about" className="text-white">
-                About Us
+                About Us <Info />
               </Link>
             </Button>
             <Button size="lg" asChild variant="secondary">
-              <Link to="contact" className="">
-                Contact Us
+              <Link to="team" className="">
+                Our Team <Users />
               </Link>
             </Button>
           </div>

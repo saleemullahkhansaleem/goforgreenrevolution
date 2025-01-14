@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Card,
   CardContent,
@@ -38,11 +38,17 @@ import {
   Trees,
   Filter,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function ServicesPage() {
+  const { serviceId } = useParams();
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedService, setSelectedService] = useState(null);
+
+  useEffect(() => {
+    setSelectedCategory(serviceId ? serviceId : "all");
+  }, [serviceId]);
 
   const filteredServices =
     selectedCategory === "all"
@@ -75,7 +81,8 @@ export default function ServicesPage() {
               <Button
                 size="sm"
                 variant={selectedCategory === "all" ? "default" : "outline"}
-                onClick={() => setSelectedCategory("all")}
+                onClick={() => navigate(`/services`)}
+                // onClick={() => setSelectedCategory("all")}
                 className="rounded-full"
               >
                 All Services
@@ -87,7 +94,8 @@ export default function ServicesPage() {
                   variant={
                     selectedCategory === category.value ? "default" : "outline"
                   }
-                  onClick={() => setSelectedCategory(category.value)}
+                  onClick={() => navigate(`/services/${category.value}`)}
+                  // onClick={() => setSelectedCategory(category.value)}
                   className="rounded-full"
                 >
                   {category.label}

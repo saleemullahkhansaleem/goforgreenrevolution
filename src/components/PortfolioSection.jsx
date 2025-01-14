@@ -1,5 +1,5 @@
 import { ProjectCard, projects } from "@/pages/Gallery";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Images } from "lucide-react";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
@@ -23,6 +23,7 @@ const PortfolioSection = () => {
         <div className="mt-16 text-center">
           <Button variant="" size="lg" asChild>
             <Link to="gallery">
+              <Images />
               View All Projects <ArrowUpRight />
             </Link>
           </Button>

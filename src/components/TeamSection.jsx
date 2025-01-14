@@ -2,7 +2,7 @@ import React from "react";
 import { ExpertCard, experts } from "@/pages/Team";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Users, Users2 } from "lucide-react";
 
 const TeamSection = () => {
   return (
@@ -25,7 +25,7 @@ const TeamSection = () => {
         <div className="mt-16 text-center">
           <Button variant="" size="lg" asChild>
             <Link to="team">
-              View All Team Members <ArrowUpRight />
+              <Users/> View All Team Members <ArrowUpRight />
             </Link>
           </Button>
         </div>

@@ -2,36 +2,41 @@ import React from "react";
 import { FaLeaf, FaWater, FaTools, FaSolarPanel } from "react-icons/fa";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MonitorCog } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: <FaLeaf className="text-primary text-xl" />,
+    href: "/services/cdm-energy",
     title: "CDM & Energy Projects",
     description:
       "We offer CDM services and energy projects that help reduce carbon emissions and promote sustainable energy solutions.",
   },
   {
     icon: <FaWater className="text-primary text-xl" />,
+    href: "/services/environmental-climate",
     title: "Environmental & Climate Services",
     description:
       "Our services include environmental consultancy, climate change adaptation, and mitigation strategies to foster sustainability.",
   },
   {
     icon: <FaTools className="text-primary text-xl" />,
+    href: "/services/drr-redd",
     title: "Disaster Risk Reduction & REDD+",
     description:
       "We work on disaster risk reduction projects and REDD+ initiatives to improve environmental resilience and reduce the impact of climate change.",
   },
   {
     icon: <FaSolarPanel className="text-primary text-xl" />,
+    href: "/services/horticulture-waste",
     title: "Horticulture & Waste Management",
     description:
       "We provide sustainable horticulture solutions and efficient waste management strategies to promote environmental protection.",
   },
   {
     icon: <FaTools className="text-primary text-xl" />,
+    href: "/services/gcf-capacity",
     title: "GCF Projects & Capacity Building",
     description:
       "We support global climate financing and provide capacity-building programs that enhance skills and foster sustainable development.",
@@ -86,7 +91,7 @@ const ServicesSection = () => {
                   className="rounded-full border-none text-foreground bg-secondary/30 hover:bg-secondary/50"
                   asChild
                 >
-                  <Link to="services">
+                  <Link to={service.href}>
                     Explore More <ArrowUpRight />
                   </Link>
                 </Button>
@@ -97,7 +102,7 @@ const ServicesSection = () => {
         <div className="mt-16 text-center">
           <Button variant="" size="lg" asChild>
             <Link to="services">
-              View All Services <ArrowUpRight />
+              <MonitorCog /> View All Services <ArrowUpRight />
             </Link>
           </Button>
         </div>

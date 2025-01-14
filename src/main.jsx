@@ -4,7 +4,15 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout.jsx";
 import "@fontsource/poppins";
-import { AboutUs, ContactUs, Gallery, Home, NotFound, Services, Team } from "./pages";
+import {
+  AboutUs,
+  ContactUs,
+  Gallery,
+  Home,
+  NotFound,
+  Services,
+  Team,
+} from "./pages";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
@@ -23,6 +31,10 @@ const router = createBrowserRouter([
       },
       {
         path: "services",
+        element: <Services />,
+      },
+      {
+        path: "services/:serviceId",
         element: <Services />,
       },
       {

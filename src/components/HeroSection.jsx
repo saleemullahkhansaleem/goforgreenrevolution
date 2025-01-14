@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { HandHeart, MessageSquare, MonitorCog } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -33,10 +34,14 @@ const HeroSection = () => {
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button size="lg" asChild>
-              <a href="services">Explore Services</a>
+              <a href="services">
+                Explore Services <MonitorCog />
+              </a>
             </Button>
             <Button size="lg" variant="secondary" asChild>
-              <a href="contact">Contact Us</a>
+              <a href="contact">
+                Contact Us <MessageSquare />
+              </a>
             </Button>
           </div>
         </div>

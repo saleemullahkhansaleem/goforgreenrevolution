@@ -10,7 +10,7 @@ export default function Footer() {
     const fetchFooterData = async () => {
       const data = {
         companyInfo: {
-          name: "Go for Green Revolution (GGR) Pvt Limited",
+          name: "Go for Green Revolution (GGR) Pvt. Ltd.",
           description:
             "GGR is a consulting firm based in Islamabad, providing environmental, management, economic, and technical consultancy services across public, social, and private sectors.",
         },

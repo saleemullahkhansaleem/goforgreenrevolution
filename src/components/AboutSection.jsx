@@ -10,7 +10,7 @@ const AboutSection = () => {
         {/* Left Content */}
         <div>
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            About <span className="text-primary">GGR Pvt Limited</span>
+            About <span className="text-primary">GGR Pvt. Ltd.</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             Go for Green Revolution (GGR) is a consulting firm based in

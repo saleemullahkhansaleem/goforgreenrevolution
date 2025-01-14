@@ -1,6 +1,6 @@
-# Go for Green Revolution (GGR) Pvt Limited
+# Go for Green Revolution (GGR) Pvt. Ltd.
 
-Go for Green Revolution (GGR) Pvt Limited is a minerals company dedicated to providing top-quality mineral resources directly to clients worldwide. Guided by the tagline, _"We bring the mountains to your doorstep,"_ our mission is to deliver sustainable and reliable mineral solutions with a commitment to excellence and customer satisfaction. This website showcases Go for Green Revolution (GGR) Pvt Limited's offerings, mission, and dedication to quality.
+Go for Green Revolution (GGR) Pvt. Ltd. is a minerals company dedicated to providing top-quality mineral resources directly to clients worldwide. Guided by the tagline, _"We bring the mountains to your doorstep,"_ our mission is to deliver sustainable and reliable mineral solutions with a commitment to excellence and customer satisfaction. This website showcases Go for Green Revolution (GGR) Pvt. Ltd.'s offerings, mission, and dedication to quality.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ Go for Green Revolution (GGR) Pvt Limited is a minerals company dedicated to pro
 
 ## About
 
-Go for Green Revolution (GGR) Pvt Limited bridges the gap between nature's resources and industry demands, delivering minerals that meet high standards of quality and sustainability. This project serves as Go for Green Revolution (GGR) Pvt Limited's digital platform, showcasing their services, values, and commitment to bringing the mountains' resources closer to their clients.
+Go for Green Revolution (GGR) Pvt. Ltd. bridges the gap between nature's resources and industry demands, delivering minerals that meet high standards of quality and sustainability. This project serves as Go for Green Revolution (GGR) Pvt. Ltd.'s digital platform, showcasing their services, values, and commitment to bringing the mountains' resources closer to their clients.
 
 ### Website URL
 

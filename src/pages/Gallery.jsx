@@ -36,7 +36,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Filter Section */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 sticky top-16 z-20 backdrop-blur-sm border-b">
+      <section className="py-2 px-4 sm:px-6 lg:px-8 sticky top-12 md:top-14 z-20 backdrop-blur-sm border-b">
         <div className="max-w-7xl mx-auto">
           <ScrollArea className="w-full whitespace-nowrap">
             <div className="flex items-center space-x-4">

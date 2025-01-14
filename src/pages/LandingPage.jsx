@@ -144,7 +144,7 @@ export default function LandingPage() {
               <div className="absolute inset-0 bg-primary/20 rounded-2xl transform rotate-3"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-primary/100 to-cyan-500 rounded-2xl rotate-3 blur-2xl opacity-20" />
               <img
-                alt="About Go for Green Revolution (GGR) Pvt Limited"
+                alt="About Go for Green Revolution (GGR) Pvt. Ltd."
                 className="relative rounded-2xl object-cover w-full aspect-[5/3] shadow-2xl"
                 src="/about.webp"
               />

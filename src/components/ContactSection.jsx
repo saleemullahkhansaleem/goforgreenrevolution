@@ -36,7 +36,7 @@ export default function ContactSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Discover the pinnacle of premium HVAC excellence with Go for Green
-            Revolution (GGR) Pvt Limited.
+            Revolution (GGR) Pvt. Ltd..
           </p>
         </motion.div>
 

@@ -50,7 +50,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/20 to-transparent overflow-hidden">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/20 to-transparent overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground">

@@ -17,18 +17,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import {
-  Wind,
-  TreePine,
-  Leaf,
-  Building,
-  AlertTriangle,
-  Recycle,
   Users,
   Globe,
   Zap,
   FileText,
   Shield,
-  Flower2,
   ArrowUpRight,
   Target,
   CloudRain,
@@ -38,7 +31,7 @@ import {
   Trees,
   Filter,
 } from "lucide-react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function ServicesPage() {
   const { serviceId } = useParams();

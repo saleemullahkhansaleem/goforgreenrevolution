@@ -2,14 +2,6 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { ThemeToggle } from ".";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import { Button } from "./ui/button";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
-  TwitterIcon,
-} from "lucide-react";
 
 const Header = ({ setDarkMode, darkMode }) => {
   return (
@@ -56,10 +48,7 @@ const Header = ({ setDarkMode, darkMode }) => {
       <header className="bg-background/70 text-foreground sticky top-0 shadow-md z-20 backdrop-blur px-4  ">
         <div className="container mx-auto flex justify-between">
           <div className="text-foreground py-1">
-            <Link
-              to="/"
-              className=""
-            >
+            <Link to="/" className="">
               <img
                 src="/logo.png"
                 alt="logo"

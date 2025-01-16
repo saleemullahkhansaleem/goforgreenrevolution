@@ -1,7 +1,6 @@
 "use client";
 
-import { MapPin, Phone, Mail, Clock, Send, ArrowUpRight } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 

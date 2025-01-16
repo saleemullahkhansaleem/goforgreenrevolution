@@ -5,12 +5,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpRight, LinkedinIcon, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
 
 export default function TeamPage() {
   return (

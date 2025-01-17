@@ -10,7 +10,7 @@ const AboutSection = () => {
         {/* Left Content */}
         <div>
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            About <span className="text-primary">GGR Pvt. Ltd.</span>
+            Introduction of <span className="text-primary">GGR</span>
           </h2>
           {/* <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             Go for Green Revolution (GGR) is a consulting firm based in
@@ -25,29 +25,13 @@ const AboutSection = () => {
             studies to project implementation.
           </p> */}
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Go for Green Revolution (GGR) Pvt Limited established under
-            Companies Ordinance 1984, is a consulting firm based in Islamabad,
-            which provides environmental, management, economic, and technical
-            consultancy services to Public, Social and Private sector needs.
-            Though the core services are technical in nature, but overall
-            approach is to consult, facilitate, mobilize, outreach and interact
-            with all the stakeholders and enable communities, organizations,
-            industries and government to work in harmony for achieving national
-            sustainable development goals in the field of environment, Climate
-            Change adaptation and mitigation & energy, hydropower (Dams and
-            Water Resources development), Natural Resource Management, industry,
-            infrastructure development, information technology, capacity
-            building etc from Feasibility to Project implementation. GGR is
-            operated by a highly qualified team of Pakistani professionals who
-            are graduates of prestigious educational institutions and have been
-            involved in a number of important national projects requiring
-            extensive first-hand experience. Leading staff members hold Master’s
-            and Doctorate degrees in the fields of Environment, Forestry, Law,
-            Computer Science, Agriculture, economic and Project Management. GGR
-            is aiming for both large and small scales projects for private
-            sector, bilateral institutions, international partner consulting
-            companies, international and national NGOs and international
-            financing institutions.
+            Go for Green Revolution (GGR) Pvt Limited, based in Islamabad,
+            provides environmental, economic, and technical consultancy to
+            public, private, and social sectors. GGR supports sustainable
+            development in climate change, energy, hydropower, natural resource
+            management, and infrastructure. Operated by highly qualified
+            professionals, the firm collaborates with local and international
+            partners on diverse projects.
           </p>
           <div className="mt-8 flex gap-4">
             <Button size="lg" asChild>

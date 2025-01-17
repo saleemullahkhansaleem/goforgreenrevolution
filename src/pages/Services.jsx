@@ -459,7 +459,7 @@ const services = [
   },
   {
     id: "capacity-building",
-    title: "Capacity Building and Awareness",
+    title: "Capacity Building and Awareness Raising Events",
     category: "gcf-capacity",
     description:
       "Empowering stakeholders through training and awareness programs.",

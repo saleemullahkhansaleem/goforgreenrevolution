@@ -303,7 +303,8 @@ export const experts = [
   {
     name: "Syed Ehtesham Ahmed Zaide",
     title: "Manager Project Implementation",
-    image: "/images/ehtesham-profile.png",
+    image:
+      "https://static.vecteezy.com/system/resources/previews/036/594/092/large_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg",
     expertise: ["Project Management", "Electronics", "Automation Control"],
     description:
       "Strong background in electronics and project management, with expertise in automation and embedded control systems.",

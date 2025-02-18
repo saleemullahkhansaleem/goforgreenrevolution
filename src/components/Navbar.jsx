@@ -9,7 +9,7 @@ export const navigation = [
     name: "Services",
     href: "/services",
   },
-  { name: "Gallery", href: "/gallery" },
+  // { name: "Gallery", href: "/gallery" },
   {
     name: "GGR Team",
     href: "/team",

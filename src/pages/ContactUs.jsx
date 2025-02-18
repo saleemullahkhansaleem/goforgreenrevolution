@@ -1,5 +1,3 @@
-"use client";
-
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -193,7 +191,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto">
           <div className="rounded-2xl overflow-hidden h-[400px] relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.8755167756086!2d73.0817!3d33.7294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDQzJzQ1LjgiTiA3M8KwMDQnNTQuMiJF!5e0!3m2!1sen!2s!4v1629789876543!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.853639126428!2d73.06064108755162!3d33.71273595101052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfa2b4a3278d%3A0x34a59e63033052c2!2sAl-Malik%20Centre!5e0!3m2!1sen!2s!4v1739857068810!5m2!1sen!2s"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -213,7 +211,7 @@ const contactInfo = [
   {
     icon: <MapPin className="w-6 h-6 text-primary" />,
     title: "Office Address",
-    content: ["Blue Area, Islamabad", "Pakistan"],
+    content: ["70-West, Blue Area, Islamabad,", "Pakistan."],
   },
   {
     icon: <Phone className="w-6 h-6 text-primary" />,
@@ -223,6 +221,6 @@ const contactInfo = [
   {
     icon: <Mail className="w-6 h-6 text-primary" />,
     title: "Email",
-    content: "info@ggrpakistan.com",
+    content: "info@goforgreenrevolution.com.pk",
   },
 ];

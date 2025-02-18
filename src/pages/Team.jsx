@@ -94,7 +94,7 @@ function LeadershipCard({ name, title, image, description, achievements }) {
         </div>
       </div>
       <div className="grid md:grid-cols-1 gap-6">
-        <div className="relative h-full min-h-[170px]">
+        <div className="relative h-full min-h-[130px] sm:min-h-0">
           <CardHeader className="p-8 pl-60 mb-4 hidden sm:block">
             <CardTitle className="text-2xl mb-2">{name}</CardTitle>
             <CardDescription className="text-lg font-medium text-primary">
@@ -231,7 +231,7 @@ export function ExpertCard({
 const leadership = [
   {
     name: "Syed Amjad Hussain",
-    title: "Director, GGR",
+    title: "Chief Executive Officer",
     image:
       "https://static.vecteezy.com/system/resources/previews/036/594/092/large_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg",
     description:
@@ -281,24 +281,24 @@ export const experts = [
     experience: 16,
   },
   {
-    name: "Waqas Zafar",
-    title: "Head Information Technology Cell",
-    image:
-      "https://static.vecteezy.com/system/resources/previews/036/594/092/large_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg",
-    expertise: ["IT Solutions", "Web Development", "Business Analysis"],
-    description:
-      "An expert in IT solutions and project management, specializing in web development, mobile apps, and business solutions.",
-    experience: 10,
-  },
-  {
     name: "Mr. Kayani",
-    title: "Strategic Planner And DRR Expert",
+    title: "Strategic Planner and DRR Expert",
     image:
       "https://static.vecteezy.com/system/resources/previews/036/594/092/large_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg",
     expertise: ["Disaster Risk Management", "Strategic Planning", "WASH"],
     description:
       "18 years of experience in disaster risk reduction, WASH, and environmental management with innovative approaches to disaster mitigation.",
     experience: 18,
+  },
+  {
+    name: "Waqas Zafar",
+    title: "Manager Information Technology",
+    image:
+      "https://static.vecteezy.com/system/resources/previews/036/594/092/large_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg",
+    expertise: ["IT Solutions", "Web Development", "Business Analysis"],
+    description:
+      "An expert in IT solutions and project management, specializing in web development, mobile apps, and business solutions.",
+    experience: 10,
   },
   {
     name: "Syed Ehtesham Ahmed Zaide",
@@ -312,7 +312,7 @@ export const experts = [
   },
   {
     name: "Danish Javaid",
-    title: "Manager Admin And Finance",
+    title: "Manager Admin and Finance",
     image:
       "https://static.vecteezy.com/system/resources/previews/036/594/092/large_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg",
     expertise: ["Project Management", "Finance", "M&E"],

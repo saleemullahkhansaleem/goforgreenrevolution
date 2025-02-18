@@ -13,7 +13,7 @@ const AboutSection = () => {
             Introduction of <span className="text-primary">GGR</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Go for Green Revolution (GGR) Pvt Limited, based in Islamabad,
+            Go for Green Revolution (GGR) Private Limited, based in Islamabad,
             provides environmental, economic, and technical consultancy to
             public, private, and social sectors. GGR supports sustainable
             development in climate change, energy, hydropower, natural resource
@@ -47,7 +47,7 @@ const AboutSection = () => {
           <div className="absolute bottom-8 left-4 md:-left-8 p-1 bg-background rounded-2xl mr-4">
             <div className="bg-accent p-4 rounded-xl border">
               <h3 className="text-lg font-semibold text-primary">
-                100+ Projects
+                20+ Projects
               </h3>
               <p className="text-sm text-muted-foreground">
                 Delivered across energy, climate change, and infrastructure.

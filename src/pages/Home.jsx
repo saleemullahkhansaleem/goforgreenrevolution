@@ -12,7 +12,8 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <PortfolioSection />
+      <div className="h-1 w-full bg-background"></div>
+      {/* <PortfolioSection /> */}
       <TeamSection />
     </div>
   );

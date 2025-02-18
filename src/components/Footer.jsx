@@ -22,7 +22,7 @@ export default function Footer() {
         quickLinks: [
           { name: "About Us", path: "/about" },
           { name: "Services", path: "/services" },
-          { name: "Projects", path: "/gallery" },
+          // { name: "Projects", path: "/gallery" },
           { name: "Contact", path: "/contact" },
         ],
         services: [

@@ -1,12 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Leaf,
-  Users,
-  LineChart,
-  Building2,
-  Globe,
-  Target,
-} from "lucide-react";
+import { Leaf, Users, LineChart, Building2, Globe, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function AboutUs() {
@@ -147,15 +140,15 @@ export default function AboutUs() {
 
 const stats = [
   {
-    value: "20+",
+    value: "10+",
     label: "Years Experience",
   },
   {
-    value: "100+",
+    value: "20+",
     label: "Projects Completed",
   },
   {
-    value: "50+",
+    value: "25+",
     label: "Expert Consultants",
   },
 ];

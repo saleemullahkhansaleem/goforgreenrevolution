@@ -1,6 +1,9 @@
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import api from "@/http/api";
+import { FaCheck } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -22,7 +25,7 @@ export default function ContactPage() {
     e.preventDefault();
     setLoading(true);
     api
-      .post("contact-us", formData)
+      .post("contact-us", { ...formData, domain_key: 1 })
       .then((response) => {
         if (response.success) {
           setSubmitted(true);
@@ -114,74 +117,86 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <form
-              onSubmit={handleSubmit}
-              className="relative bg-muted rounded-2xl p-8"
-            >
-              <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-              <p className="mb-6">
-                Feel free to reach out with any inquiries or questions. We're
-                here to help!
-              </p>
-              <div className="space-y-4 mb-12">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full py-2 px-4 bg-foreground/5 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full py-2 px-4 bg-foreground/5 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary"
-                />
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full py-2 px-4 bg-foreground/5 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary"
-                />
-                <textarea
-                  name="message"
-                  rows="5"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="w-full py-2 px-4 bg-foreground/5 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary resize-none"
-                />
-                {error && <p className="text-red-500">{error}</p>}
-              </div>
-              <div className="absolute right-0 bottom-0 pt-3 pl-3 rounded-tl-[2rem] bg-background z-10">
-                <span className="absolute right-full bottom-0 w-8 h-8 bg-background rounded-full rounded-br-none"></span>
-                <span className="absolute right-full bottom-0 w-8 h-8 bg-muted rounded-br-3xl"></span>
-                <span className="absolute right-0 bottom-full w-8 h-8 bg-background rounded-full rounded-br-none"></span>
-                <span className="absolute right-0 bottom-full w-8 h-8 bg-muted rounded-br-3xl"></span>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="rounded-full border-none bg-primary/10 hover:bg-primary/20 text-primary"
-                >
-                  {loading ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      Send Message <Send />
-                    </>
-                  )}
+            {submitted ? (
+              <div className="w-full max-w-lg m-auto flex flex-col items-center gap-4">
+                <FaCheck size={60} className="text-green-500 mb-4" />
+                <h1 className="text-2xl text-foreground">
+                  You message send successfully
+                </h1>
+                <Button variant="" asChild>
+                  <Link to="/">Go to Home</Link>
                 </Button>
               </div>
-            </form>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="relative bg-muted rounded-2xl p-8"
+              >
+                <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+                <p className="mb-6">
+                  Feel free to reach out with any inquiries or questions. We're
+                  here to help!
+                </p>
+                <div className="space-y-4 mb-12">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full py-2 px-4 bg-foreground/5 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full py-2 px-4 bg-foreground/5 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary"
+                  />
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                    className="w-full py-2 px-4 bg-foreground/5 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary"
+                  />
+                  <textarea
+                    name="message"
+                    rows="5"
+                    placeholder="Your Message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    className="w-full py-2 px-4 bg-foreground/5 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary resize-none"
+                  />
+                  {error && <p className="text-red-500">{error}</p>}
+                </div>
+                <div className="absolute right-0 bottom-0 pt-3 pl-3 rounded-tl-[2rem] bg-background z-10">
+                  <span className="absolute right-full bottom-0 w-8 h-8 bg-background rounded-full rounded-br-none"></span>
+                  <span className="absolute right-full bottom-0 w-8 h-8 bg-muted rounded-br-3xl"></span>
+                  <span className="absolute right-0 bottom-full w-8 h-8 bg-background rounded-full rounded-br-none"></span>
+                  <span className="absolute right-0 bottom-full w-8 h-8 bg-muted rounded-br-3xl"></span>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="rounded-full border-none bg-primary/10 hover:bg-primary/20 text-primary"
+                  >
+                    {loading ? (
+                      "Sending..."
+                    ) : (
+                      <>
+                        Send Message <Send />
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </section>

@@ -32,6 +32,7 @@ import {
   Filter,
 } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function ServicesPage() {
   const { serviceId } = useParams();
@@ -50,6 +51,13 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Services - Go for Green Revolution (GGR)</title>
+        <meta
+          name="description"
+          content="Go for Green Revolution (GGR) Pvt. Ltd. - GGR is a consulting firm based in Islamabad, providing environmental, management, economic, and technical consultancy services across public, social, and private sectors."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/20 to-transparent overflow-hidden">
         <div className="max-w-7xl mx-auto">

@@ -1,10 +1,18 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Leaf, Users, LineChart, Building2, Globe, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Helmet } from "react-helmet-async";
 
 export default function AboutUs() {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>About - Go for Green Revolution (GGR)</title>
+        <meta
+          name="description"
+          content="Go for Green Revolution (GGR) Pvt. Ltd. - GGR is a consulting firm based in Islamabad, providing environmental, management, economic, and technical consultancy services across public, social, and private sectors."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/20 to-transparent">
         <div className="max-w-7xl mx-auto">

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Helmet } from "react-helmet-async";
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -21,6 +22,13 @@ export default function PortfolioPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Gellery - Go for Green Revolution (GGR)</title>
+        <meta
+          name="description"
+          content="Go for Green Revolution (GGR) Pvt. Ltd. - GGR is a consulting firm based in Islamabad, providing environmental, management, economic, and technical consultancy services across public, social, and private sectors."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/20 to-transparent overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">

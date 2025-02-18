@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import api from "@/http/api";
 import { FaCheck } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -49,6 +50,13 @@ export default function ContactPage() {
   };
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Contact - Go for Green Revolution (GGR)</title>
+        <meta
+          name="description"
+          content="Go for Green Revolution (GGR) Pvt. Ltd. - GGR is a consulting firm based in Islamabad, providing environmental, management, economic, and technical consultancy services across public, social, and private sectors."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/20 to-transparent overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -83,7 +91,7 @@ export default function ContactPage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {contactInfo.map((item, index) => (
                   <div
-                    key={item.icon}
+                    key={item.title}
                     className={`p-8 bg-muted rounded-2xl relative ${
                       index === 0 && "sm:col-span-2"
                     }`}
@@ -102,7 +110,7 @@ export default function ContactPage() {
                       {Array.isArray(item.content) ? (
                         <div className="space-y-1">
                           {item.content.map((line, i) => (
-                            <p key={i} className="text-muted-foreground">
+                            <p key={line} className="text-muted-foreground">
                               {line}
                             </p>
                           ))}

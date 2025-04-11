@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+import MrCard from "./MrCard";
 
 export default function Footer() {
   const [footerData, setFooterData] = useState(null);
@@ -148,6 +149,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Go for Green Revolution (GGR) Pvt
             Limited. All rights reserved.
           </p>
+          <MrCard />
           <div className="flex gap-6">
             {footerData.socialMedia.map((social) => (
               <Link

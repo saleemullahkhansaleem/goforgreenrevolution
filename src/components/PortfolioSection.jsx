@@ -1,11 +1,10 @@
 import { ProjectCard, projects } from "@/pages/Gallery";
 import { ArrowUpRight, Images } from "lucide-react";
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
 const PortfolioSection = () => {
-  const navigate = useNavigate();
   return (
     <section id="portfolio" className="py-16 px-6 lg:px-20">
       <div className="max-w-7xl container mx-auto">

@@ -245,7 +245,7 @@ const leadership = [
     description:
       "A highly motivated and result-oriented Climate Change Professional with M.Sc (Hons)/M.Phil in Agriculture specializing in Water Management from Agricultural University Peshawar, Pakistan.",
     achievements: [
-      "15+ years experience with Multi-Lateral and Bi-Lateral donors",
+      "25+ years experience with Multi-Lateral and Bi-Lateral donors",
       "Assessed 105+ Public and Private sector CDM projects",
       "Organized 80+ Climate Change workshops and seminars",
       "Facilitated 7 NAMAs submission to UK/German Facility",

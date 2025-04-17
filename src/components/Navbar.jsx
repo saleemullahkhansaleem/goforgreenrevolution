@@ -9,11 +9,11 @@ export const navigation = [
     name: "Services",
     href: "/services",
   },
-  // { name: "Gallery", href: "/gallery" },
   {
     name: "GGR Team",
     href: "/team",
   },
+  { name: "Downloads", href: "/downloads" },
   { name: "Contact Us", href: "/contact" },
 ];
 

@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  ArrowRight,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import MrCard from "./MrCard";
 
@@ -23,9 +29,11 @@ export default function Footer() {
         quickLinks: [
           { name: "About Us", path: "/about" },
           { name: "Services", path: "/services" },
-          // { name: "Projects", path: "/gallery" },
+          { name: "GGR Team", path: "/team" },
+          { name: "Downloads", path: "/downloads" },
           { name: "Contact", path: "/contact" },
         ],
+        importentLinks: [{ name: "About Us", path: "/about" }],
         services: [
           {
             name: "CDM & Energy Projects",
@@ -50,10 +58,10 @@ export default function Footer() {
         ],
 
         socialMedia: [
-          { platform: "Facebook", url: "#", icon: <Facebook size={20} /> },
-          { platform: "Instagram", url: "#", icon: <Instagram size={20} /> },
-          { platform: "Twitter", url: "#", icon: <Twitter size={20} /> },
-          { platform: "LinkedIn", url: "#", icon: <Linkedin size={20} /> },
+          { platform: "Facebook", url: "#", icon: <Facebook size={16} /> },
+          { platform: "Instagram", url: "#", icon: <Instagram size={16} /> },
+          { platform: "Twitter", url: "#", icon: <Twitter size={16} /> },
+          { platform: "LinkedIn", url: "#", icon: <Linkedin size={16} /> },
         ],
       };
       setFooterData(data);
@@ -84,7 +92,7 @@ export default function Footer() {
         </div>
 
         {/* Contact Section */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <h3 className="text-lg font-semibold text-foreground">
             Get in Touch
           </h3>
@@ -93,13 +101,13 @@ export default function Footer() {
           </div>
           <Link
             to={`mailto:${footerData.contactInfo.email}`}
-            className="text-sm text-primary hover:underline"
+            className="text-sm text-primary hover:underline underline-offset-4"
           >
             {footerData.contactInfo.email}
           </Link>
           <Link
             to={`tel:${footerData.contactInfo.phone}`}
-            className="text-sm text-primary hover:underline"
+            className="text-sm text-primary hover:underline underline-offset-4"
           >
             {footerData.contactInfo.phone}
           </Link>
@@ -113,8 +121,12 @@ export default function Footer() {
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className="text-sm hover:text-foreground hover:underline"
+                  className="text-sm hover:text-foreground hover:underline underline-offset-4 flex items-center gap-2 group"
                 >
+                  <ArrowRight
+                    size={14}
+                    className="group-hover:translate-x-[2px] transition-transform"
+                  />{" "}
                   {link.name}
                 </Link>
               </li>
@@ -132,8 +144,12 @@ export default function Footer() {
               <li key={service.name}>
                 <Link
                   to={service.path}
-                  className="text-sm hover:text-foreground hover:underline"
+                  className="text-sm hover:text-foreground hover:underline underline-offset-4 flex items-center gap-2 group"
                 >
+                  <ArrowRight
+                    size={14}
+                    className="group-hover:translate-x-[2px] transition-transform"
+                  />{" "}
                   {service.name}
                 </Link>
               </li>
@@ -144,13 +160,13 @@ export default function Footer() {
 
       {/* Footer Bottom Section */}
       <div className="border-t border-foreground/20">
-        <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-6 py-6 px-6">
-          <p className="text-sm">
+        <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-6 py-4 px-6">
+          <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Go for Green Revolution (GGR) Pvt
             Limited. All rights reserved.
           </p>
           <MrCard />
-          <div className="flex gap-6">
+          <div className="flex gap-4">
             {footerData.socialMedia.map((social) => (
               <Link
                 key={social.platform}

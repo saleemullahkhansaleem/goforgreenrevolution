@@ -103,7 +103,7 @@ export default function AboutUs() {
                 </h2>
               </div>
               <p className="text-xl leading-relaxed mt-4">
-                To help Private and Public sectors and individuals benefit from
+                To help Public and Private sectors and individuals benefits from
                 adopting low Greenhouse Gases and environmental conscious life
                 styles, addressing global environmental issues with local
                 approaches while considering national circumstances for

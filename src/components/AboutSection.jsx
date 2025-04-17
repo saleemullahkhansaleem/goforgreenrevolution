@@ -9,8 +9,11 @@ const AboutSection = () => {
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div>
-          <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            Introduction of <span className="text-primary">GGR</span>
+          <h2 className="text-2xl lg:text-4xl font-bold mb-6">
+            Introduction of{" "}
+            <span className="text-primary">
+              Go for Green Revolution (GGR) (Pvt.) Ltd.
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Go for Green Revolution (GGR) Private Limited, based in Islamabad,

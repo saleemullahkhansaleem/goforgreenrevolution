@@ -7,6 +7,7 @@ import "@fontsource/poppins";
 import {
   AboutUs,
   ContactUs,
+  Downloads,
   Gallery,
   Home,
   NotFound,
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "team",
         element: <Team />,
+      },
+      {
+        path: "downloads",
+        element: <Downloads />,
       },
       {
         path: "*",

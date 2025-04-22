@@ -12,11 +12,11 @@ const AboutSection = () => {
           <h2 className="text-2xl lg:text-4xl font-bold mb-6">
             Introduction of{" "}
             <span className="text-primary">
-              Go for Green Revolution (GGR) (Pvt.) Ltd.
+              Go for Green Revolution (Pvt.) Ltd.
             </span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Go for Green Revolution (GGR) Private Limited, based in Islamabad,
+            Go for Green Revolution <strong className="text-primary">(GGR)</strong> Private Limited, based in Islamabad,
             provides environmental, economic, and technical consultancy to
             public, private, and social sectors. GGR supports sustainable
             development in climate change, energy, hydropower, natural resource
